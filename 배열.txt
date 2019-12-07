@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Average {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int [] num = new int [100];
+		int a=0;
+		int sum=0;
+		
+		for (int i=0 ; i<100 ; i++) {
+			num[i] = input.nextInt();
+			if (num[i]==1111) break;
+			else {
+				if (num[i]%7==0 || num[i]%2==0) {
+					sum = sum;
+				}
+				else {
+					sum += num[i];
+					a++;
+				}
+			}
+		}
+		if (a==0) 
+			System.out.println("평균을 계산할 수 없습니다.");
+		else {
+			double b = sum/a;
+			System.out.printf("평균: %.1f\n",b);
+		}
+	}
+}
